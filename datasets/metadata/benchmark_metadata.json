@@ -1,0 +1,263 @@
+{
+  "generated": "2026-06-24T04:07:00.213767",
+  "description": "QuantEdge Publication-Grade Benchmark Datasets",
+  "datasets": {
+    "HR_Benchmark_20K.csv": {
+      "target_size": 20000,
+      "high_risk": [
+        "EmployeeID",
+        "EmployeeNumber",
+        "Email",
+        "Phone",
+        "Address",
+        "MonthlyIncome"
+      ],
+      "medium_risk": [
+        "Age",
+        "Manager"
+      ],
+      "low_risk": [
+        "Department",
+        "JobRole",
+        "YearsAtCompany",
+        "BusinessTravel"
+      ],
+      "source_composition": {
+        "Kaggle IBM HR (WA_Fn-UseC_-HR-Employee-Attrition.csv)": "70%",
+        "QuantEdge_HR_Dataset.csv (synthetic augmentation)": "30%"
+      },
+      "expected_tokenized": [
+        "EmployeeID",
+        "EmployeeNumber",
+        "Email",
+        "Phone",
+        "Address",
+        "MonthlyIncome"
+      ],
+      "expected_passthrough": [
+        "Department",
+        "JobRole",
+        "YearsAtCompany",
+        "BusinessTravel"
+      ],
+      "columns": [
+        "EmployeeID",
+        "EmployeeNumber",
+        "EmployeeName",
+        "Email",
+        "Phone",
+        "Address",
+        "Age",
+        "Gender",
+        "Department",
+        "JobRole",
+        "MonthlyIncome",
+        "Manager",
+        "YearsAtCompany",
+        "MaritalStatus",
+        "BusinessTravel",
+        "OverTime",
+        "RiskScore"
+      ]
+    },
+    "Healthcare_Benchmark_50K.csv": {
+      "target_size": 50000,
+      "high_risk": [
+        "PatientID",
+        "PatientName",
+        "Email",
+        "Phone",
+        "Address",
+        "Diagnosis",
+        "InsuranceProvider",
+        "BillingAmount"
+      ],
+      "medium_risk": [
+        "BloodType",
+        "Medication",
+        "Doctor"
+      ],
+      "low_risk": [
+        "Hospital"
+      ],
+      "source_composition": {
+        "Kaggle Healthcare Dataset": "80%",
+        "QuantEdge_Healthcare_Dataset.csv (synthetic augmentation)": "20%"
+      },
+      "expected_tokenized": [
+        "PatientID",
+        "PatientName",
+        "Email",
+        "Phone",
+        "Address",
+        "Diagnosis",
+        "InsuranceProvider",
+        "BillingAmount"
+      ],
+      "expected_passthrough": [
+        "Hospital"
+      ],
+      "columns": [
+        "PatientID",
+        "PatientName",
+        "Email",
+        "Phone",
+        "Address",
+        "Age",
+        "BloodType",
+        "Diagnosis",
+        "Doctor",
+        "InsuranceProvider",
+        "BillingAmount",
+        "Medication",
+        "Hospital",
+        "RiskScore"
+      ]
+    },
+    "Banking_Benchmark_100K.csv": {
+      "target_size": 100000,
+      "high_risk": [
+        "CustomerID",
+        "Email",
+        "Phone",
+        "DOB",
+        "AccountNumber",
+        "Balance"
+      ],
+      "medium_risk": [
+        "CreditScore",
+        "TransactionAmount"
+      ],
+      "low_risk": [
+        "Gender",
+        "Location"
+      ],
+      "source_composition": {
+        "Kaggle Bank Transactions": "~70%",
+        "QuantEdge_Customer_Dataset.csv (synthetic augmentation)": "~30%"
+      },
+      "expected_tokenized": [
+        "CustomerID",
+        "Email",
+        "Phone",
+        "DOB",
+        "AccountNumber",
+        "Balance"
+      ],
+      "expected_passthrough": [
+        "Gender",
+        "Location"
+      ],
+      "columns": [
+        "CustomerID",
+        "CustomerName",
+        "Email",
+        "Phone",
+        "DOB",
+        "Gender",
+        "Location",
+        "AccountNumber",
+        "CreditScore",
+        "Balance",
+        "TransactionAmount",
+        "RiskCategory",
+        "RiskScore"
+      ]
+    },
+    "Adversarial_Benchmark_20K.csv": {
+      "target_size": 20000,
+      "high_risk": [
+        "WorkerReference",
+        "CompensationMetric",
+        "MedicalReference",
+        "CoverageEntity",
+        "FinancialReference",
+        "ContactChannel",
+        "PrimaryContact",
+        "LocationDescriptor"
+      ],
+      "medium_risk": [
+        "Age"
+      ],
+      "low_risk": [
+        "Department",
+        "Role"
+      ],
+      "source_composition": {
+        "HR_Benchmark_20K (transformed)": "~25%",
+        "Healthcare_Benchmark_50K (transformed)": "~25%",
+        "Banking_Benchmark_100K (transformed)": "~25%",
+        "QuantEdge_Adversarial_Dataset.csv": "~25%"
+      },
+      "expected_tokenized": [
+        "WorkerReference",
+        "CompensationMetric",
+        "MedicalReference",
+        "CoverageEntity",
+        "FinancialReference",
+        "ContactChannel",
+        "PrimaryContact",
+        "LocationDescriptor"
+      ],
+      "expected_passthrough": [
+        "Department",
+        "Role"
+      ],
+      "columns": [
+        "WorkerReference",
+        "CompensationMetric",
+        "MedicalReference",
+        "CoverageEntity",
+        "FinancialReference",
+        "ContactChannel",
+        "PrimaryContact",
+        "LocationDescriptor",
+        "Age",
+        "Department",
+        "Role",
+        "RiskScore"
+      ]
+    },
+    "Scalability_Benchmark_1M.csv": {
+      "target_size": 1000000,
+      "high_risk": [
+        "CustomerID",
+        "Email",
+        "Phone",
+        "AccountNumber",
+        "Balance"
+      ],
+      "medium_risk": [
+        "TransactionAmount"
+      ],
+      "low_risk": [
+        "RiskCategory"
+      ],
+      "source_composition": {
+        "Expanded from Banking_Benchmark_100K": "~50%",
+        "Synthetic generation": "~50%"
+      },
+      "expected_tokenized": [
+        "CustomerID",
+        "Email",
+        "Phone",
+        "AccountNumber",
+        "Balance"
+      ],
+      "expected_passthrough": [
+        "RiskCategory"
+      ],
+      "columns": [
+        "CustomerID",
+        "CustomerName",
+        "Email",
+        "Phone",
+        "AccountNumber",
+        "Balance",
+        "TransactionAmount",
+        "RiskCategory",
+        "RiskScore"
+      ]
+    }
+  }
+}

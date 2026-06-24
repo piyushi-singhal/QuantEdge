@@ -1,0 +1,6 @@
+Dataset,TotalRows,TotalFields,HighRiskFields,MediumRiskFields,LowRiskFields,HighRiskRows,MediumRiskRows,LowRiskRows,HighRiskPct,MediumRiskPct,LowRiskPct
+HR 20K,20000,17,6,2,4,0,20000,0,0.0,100.0,0.0
+Healthcare 50K,50000,14,8,3,1,50000,0,0,100.0,0.0,0.0
+Banking 100K,100000,13,6,2,2,25085,45493,29422,25.1,45.5,29.4
+Adversarial 20K,20000,12,8,1,2,8367,9430,2203,41.8,47.1,11.0
+Scalability 1M,1000000,9,5,1,1,169488,526632,303880,16.9,52.7,30.4

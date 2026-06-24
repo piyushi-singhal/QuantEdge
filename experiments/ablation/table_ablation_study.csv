@@ -1,0 +1,6 @@
+Configuration,FieldsProcessed,Precision,Recall,F1,Accuracy,TotalLatency_s,AvgLatency_us
+Regex Baseline,116000,1.0,0.3784,0.5491,0.6463,0.1453,1.25
+ML Detector Only,116000,0.622,0.9297,0.7453,0.6385,0.9147,7.89
+ML + Risk Scoring,116000,0.6388,0.9514,0.7644,0.6663,2.0142,17.36
+ML + Risk + Token,116000,0.6388,0.9514,0.7644,0.6663,4.3476,37.48
+Full QuantEdge,116000,0.6388,0.9514,0.7644,0.6663,4033.7916,34774.07

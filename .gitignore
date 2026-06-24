@@ -1,0 +1,67 @@
+# QuantEdge .gitignore
+
+# ── Virtual Environments ──
+venv/
+venv_py311/
+.venv/
+
+# ── Environment / Secrets ──
+.env
+*.pem
+*.key
+
+# ── Python Cache ──
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+
+# ── SQLite Databases ──
+*.db
+*.db-shm
+*.db-wal
+
+# ── Node / Frontend ──
+node_modules/
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+
+# ── macOS ──
+.DS_Store
+Thumbs.db
+
+# ── IDE ──
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# ── Jupyter Notebook Checkpoints ──
+.ipynb_checkpoints/
+
+# ── Compiled Contract Artifacts (generated) ──
+contracts/build/ABI/
+contracts/build/BIN/
+
+# ── Logs ──
+*.log
+
+# ── Runtime Data ──
+data/input/
+data/processed/
+data/stats.json
+data/token_mappings.json
+
+# ── Archive (backup of obsolete files, not for distribution) ──
+archive/
+
+# ── Oversized Files (regenerate via generate_datasets.py) ──
+datasets/benchmark/Scalability_Benchmark_1M.csv
+datasets/splits/Scalability_Benchmark_1M_train.csv
+datasets/splits/Scalability_Benchmark_1M_validation.csv
+datasets/splits/Scalability_Benchmark_1M_test.csv

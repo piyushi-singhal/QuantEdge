@@ -1,0 +1,5 @@
+Module,ΔF1,ΔAccuracy,ΔLatency_us
+ML Detector Only,0.1962,-0.0078,6.64
+Risk Scoring,0.0191,0.0278,9.47
+Token,0.0,0.0,20.12
+Full QuantEdge,0.0,0.0,34736.59

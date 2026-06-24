@@ -1,0 +1,15 @@
+# QuantEdge — Development Dependencies
+# Install: pip install -r requirements/dev.txt
+
+-r base.txt
+
+# ── Testing ──
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# ── Linting / Formatting ──
+ruff==0.1.8
+black==23.12.1
+
+# ── Type Checking ──
+mypy==1.8.0

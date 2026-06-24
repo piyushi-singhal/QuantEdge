@@ -1,0 +1,27 @@
+flowchart TD
+    S1["Step 1: Enterprise<br/>Dataset Upload"]
+    S2["Step 2: Data<br/>Preprocessing"]
+    S3["Step 3: Sensitive Data Detection<br/>───────────────<br/>TF‑IDF Feature Extraction<br/>→ Logistic Regression<br/>→ Confidence Score"]
+    S4["Step 4: Risk Assessment<br/>───────────────<br/>Field Analysis<br/>Entropy Analysis<br/>Department Modifier<br/>→ Risk Score (0–100)"]
+    S5{"Step 5: Risk<br/>Classification"}
+    S5H["High Risk<br/>(score ≥ 70)"]
+    S5M["Medium Risk<br/>(50 ≤ score < 70)"]
+    S5L["Low Risk<br/>(score < 50)"]
+    S6["Step 6: Dynamic Tokenization<br/>───────────────<br/>CSPRNG Seed<br/>Token A (identifier)<br/>Token B (blockchain)<br/>SHA3‑256 Hash"]
+    S7["Step 7: Blockchain Audit<br/>───────────────<br/>Smart Contract Call<br/>Token Hash Storage<br/>Transaction Receipt"]
+    S8["Step 8: Access Control<br/>───────────────<br/>JWT Authentication<br/>Permission Validation<br/>Expiry: 5/15/30 min"]
+    S9["Step 9: Secure Data<br/>Presentation"]
+    S10["Step 10: Audit Logging<br/>and Verification"]
+
+    S1 --> S2 --> S3 --> S4 --> S5
+    S5 -->|high| S5H
+    S5 -->|medium| S5M
+    S5 -->|low| S5L
+    S5H --> S6
+    S5M --> S6
+    S5L -->|pass-through| S8
+    S6 --> S7
+    S7 --> S8
+    S8 --> S9
+    S9 --> S10
+    S7 -.->|verify hash| S10

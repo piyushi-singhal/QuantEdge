@@ -1,0 +1,7 @@
+# QuantEdge — Dependency Installation
+#
+# For runtime:   pip install -r requirements/base.txt
+# For research:  pip install -r requirements/research.txt
+# For dev:       pip install -r requirements/dev.txt
+
+-r requirements/base.txt

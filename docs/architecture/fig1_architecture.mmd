@@ -1,0 +1,65 @@
+graph TB
+    subgraph L0["Layer 0: Enterprise Data Source"]
+        DS["Enterprise Dataset<br/>CSV / Database Export"]
+    end
+
+    subgraph L1["Layer 1: AI Sensitivity Detection"]
+        TFIDF["TF-IDF Vectorizer<br/>(char_wb, ngram 2-5)"]
+        LR["Logistic Regression<br/>Classifier"]
+        CS["Confidence Scoring<br/>p(sensitive) ∈ [0, 1]"]
+        DS --> TFIDF --> LR --> CS
+    end
+
+    subgraph L2["Layer 2: Risk Scoring Engine"]
+        FA["Field Pattern<br/>Analysis"]
+        EA["Shannon Entropy<br/>Analysis"]
+        DRM["Department‑Based<br/>Risk Modifier"]
+        RC["Risk Classification<br/>High / Medium / Low"]
+        CS --> FA
+        CS --> EA
+        FA --> RC
+        EA --> RC
+        DRM --> RC
+    end
+
+    subgraph L3["Layer 3: Dynamic Tokenization"]
+        CSPRNG["CSPRNG<br/>os.urandom(32)"]
+        DTG["Dual Token<br/>Generation"]
+        SHA3["SHA3‑256<br/>Hashing"]
+        FERNET["Fernet<br/>Encryption"]
+        CSPRNG --> DTG --> SHA3 --> FERNET
+    end
+
+    subgraph L4["Layer 4: Blockchain Audit Layer"]
+        SC["Solidity Smart<br/>Contract<br/>TokenStore.sol"]
+        EVM["Local EVM<br/>(py‑evm)"]
+        TS["On‑Chain Token<br/>Storage"]
+        TXH["Transaction Hash<br/>Generation"]
+        SC --> EVM --> TS --> TXH
+    end
+
+    subgraph L5["Layer 5: Secure Storage"]
+        SQL["SQLite Database<br/>Token Mappings"]
+        FS["File System<br/>Processed Outputs"]
+    end
+
+    subgraph L6["Layer 6: Role‑Based Access Control"]
+        AUTH["JWT<br/>Authentication"]
+        PBAC["Dynamic Token<br/>Expiry Enforcement"]
+        RBAC["5‑min / 15‑min / 30‑min<br/>Expiry Rules"]
+        AUTH --> PBAC --> RBAC
+    end
+
+    subgraph L7["Layer 7: Presentation"]
+        UI["React Dashboard<br/>(Material UI)"]
+        API["FastAPI REST<br/>Endpoints"]
+        UI --> API
+    end
+
+    RC -->|risk score| DTG
+    RC -->|expiry config| RBAC
+    FERNET -->|token B hash| SC
+    FERNET -->|token mapping| SQL
+    TXH -->|audit trail| FS
+    RBAC -->|filtered data| API
+    SQL -->|field mapping| API

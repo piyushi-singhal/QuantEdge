@@ -1,0 +1,47 @@
+{
+  "HR_Benchmark_20K": {
+    "rows": 20000,
+    "duplicates": 0,
+    "dup_rate": "0.00%",
+    "id_duplicates": 0,
+    "high_risk_count": 0,
+    "med_risk_count": 20000,
+    "low_risk_count": 0
+  },
+  "Healthcare_Benchmark_50K": {
+    "rows": 50000,
+    "duplicates": 0,
+    "dup_rate": "0.00%",
+    "id_duplicates": 0,
+    "high_risk_count": 50000,
+    "med_risk_count": 0,
+    "low_risk_count": 0
+  },
+  "Banking_Benchmark_100K": {
+    "rows": 100000,
+    "duplicates": 0,
+    "dup_rate": "0.00%",
+    "id_duplicates": 0,
+    "high_risk_count": 25085,
+    "med_risk_count": 45493,
+    "low_risk_count": 29422
+  },
+  "Adversarial_Benchmark_20K": {
+    "rows": 20000,
+    "duplicates": 0,
+    "dup_rate": "0.00%",
+    "id_duplicates": 0,
+    "high_risk_count": 8367,
+    "med_risk_count": 9430,
+    "low_risk_count": 2203
+  },
+  "Scalability_Benchmark_1M": {
+    "rows": 1000000,
+    "duplicates": 0,
+    "dup_rate": "0.00%",
+    "id_duplicates": 0,
+    "high_risk_count": 169488,
+    "med_risk_count": 526632,
+    "low_risk_count": 303880
+  }
+}

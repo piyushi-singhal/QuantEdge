@@ -1,0 +1,32 @@
+======================================================================
+ABLATION STUDY — MODULE CONTRIBUTION ANALYSIS
+======================================================================
+
+Module Added                   ΔPrec    ΔRecall  ΔF1      ΔAcc     ΔLat(µs)  
+----------------------------------------------------------------------
+ML Detector Only               -0.3780  +0.5513  +0.1962  -0.0078     +6.64µs
+Risk Scoring                   +0.0168  +0.0217  +0.0191  +0.0278     +9.47µs
+Token                          +0.0000  +0.0000  +0.0000  +0.0000    +20.12µs
+Full QuantEdge                 +0.0000  +0.0000  +0.0000  +0.0000  +34736.59µs
+
+======================================================================
+MODULE ROLES:
+======================================================================
+
+1. Regex Baseline:     Fast pattern matching — limited to known formats
+2. ML Detector:        TF-IDF(ngram 2-5) + LogisticRegression — generalizes
+3. Risk Scoring:       Field heuristics + entropy. Adapts thresholds dynamically.
+4. Tokenization:       SHA3-256 + Fernet. Replaces sensitive values.
+5. Blockchain:         py-evm EVM. Immutable token hashes on-chain.
+
+======================================================================
+CUMULATIVE SYSTEM VIEW
+======================================================================
+
+Stage                          F1       Latency   
+----------------------------------------------------------------------
+Regex Baseline                 0.5491      1.25µs
+ML Detector Only               0.7453      7.89µs
+ML + Risk Scoring              0.7644     17.36µs
+ML + Risk + Token              0.7644     37.48µs
+Full QuantEdge                 0.7644  34774.07µs

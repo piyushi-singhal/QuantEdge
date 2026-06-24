@@ -1,0 +1,19 @@
+# QuantEdge — Research / Experiment Dependencies
+# Install: pip install -r requirements/research.txt
+
+-r base.txt
+
+# ── Machine Learning ──
+scikit-learn==1.3.2
+
+# ── Blockchain (Local EVM) ──
+web3==6.11.1
+eth-hash[pycryptodome]
+eth-account==0.10.0
+py-evm==0.8.0
+
+# ── Visualization ──
+matplotlib==3.8.2
+
+# ── Performance Monitoring ──
+psutil==5.9.6

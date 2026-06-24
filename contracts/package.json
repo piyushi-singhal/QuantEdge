@@ -1,0 +1,17 @@
+{
+  "name": "quantedge-main",
+  "version": "1.0.0",
+  "description": "A modern web application for secure data tokenization using quantum-inspired algorithms. This application provides a robust solution for tokenizing sensitive data across different departments while maintaining data integrity and security.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^7.0.0",
+    "hardhat": "^3.9.0"
+  }
+}
