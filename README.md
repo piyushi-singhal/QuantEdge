@@ -96,109 +96,6 @@ QuantEdge/
 └── README.md                       # This file
 ```
 
----
-
-## Installation
-
-### Prerequisites
-
-- Python 3.10+
-- pip
-
-### Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/QuantEdge.git
-cd QuantEdge
-
-# Create virtual environment
-python -m venv venv
-source venv/bin/activate  # Windows: .\venv\Scripts\activate
-
-# Install base dependencies
-pip install -r requirements/base.txt
-
-# For running experiments
-pip install -r requirements/research.txt
-```
-
----
-
-## Running QuantEdge
-
-### Start the application
-
-```bash
-uvicorn app:app --reload
-```
-
-Open [http://localhost:8000](http://localhost:8000) to access the dashboard.
-
-### Key API Endpoints
-
-| Endpoint | Description |
-|----------|-------------|
-| `GET /` | Main dashboard |
-| `GET /login` | Login page |
-| `GET /register` | Registration page |
-| `GET /stats` | System-wide tokenization statistics |
-| `GET /api/mappings/{field}` | Token mappings for a specific field |
-| `GET /api/fields` | Available fields for tokenization |
-| `POST /upload` | Upload a CSV file for processing |
-
-### Authentication
-
-Default users: `admin` / `admin123` (admin role) and `user` / `user123` (user role). Create new accounts via `/register`.
-
----
-
-## Running Experiments
-
-### Prerequisites
-
-```bash
-pip install -r requirements/research.txt
-```
-
-### Benchmark Datasets
-
-First generate the 5 benchmark datasets:
-
-```bash
-python generate_datasets.py
-```
-
-Output: `datasets/benchmark/` (5 CSVs), `datasets/splits/` (15 train/val/test splits), `datasets/metadata/` (stats + validation report).
-
-### Experiments
-
-Run the 5-experiment evaluation suite:
-
-```bash
-python run_experiments.py
-```
-
-Output: `experiments/results/` (6 CSVs + IEEE tables) and `experiments/figures/` (7 PNG graphs).
-
-### Ablation Study
-
-Run the 5-configuration ablation study:
-
-```bash
-python run_ablation.py
-```
-
-Output: `experiments/ablation/` (CSVs + contribution analysis + IEEE table) and `experiments/figures/` (5 additional PNGs).
-
-### Research Evaluation
-
-Run the full ML audit + blockchain benchmarks:
-
-```bash
-python research_evaluation.py
-python generate_figures.py
-```
 
 ---
 
@@ -272,8 +169,8 @@ MIT License — see [LICENSE](LICENSE) for details.
 ```bibtex
 @inproceedings{quantedge2025,
   title={QuantEdge: An AI-Driven Dynamic Tokenization Framework with Blockchain-Based Auditability and Risk-Adaptive Access Control for Secure Enterprise Data Sharing},
-  author={[Author Names]},
+  author={[Piyushi Singhal]},
   booktitle={Proceedings of the [Conference Name]},
-  year={2025}
+  year={2026}
 }
 ```
